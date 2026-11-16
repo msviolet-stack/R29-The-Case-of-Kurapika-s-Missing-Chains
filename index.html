@@ -85,7 +85,8 @@ footer{padding-bottom:18px}
   <span class="case-icon" aria-hidden="true">🔍</span>
   <span class="case-tag">CONFIDENTIAL CASE FILE</span>
   <h1 id="welcome-title">The Case of Kurapika’s Missing Chains</h1>
-  <p class="case-summary">A missing display. A stray Joker. Four suspects.</p>
+  <p class="case-summary">A kidnapping at the auction. Missing chains. A stray Joker.</p>
+  <p class="credit">Story created by Por Ter and Kyven</p>
   <form id="start-form">
     <label for="detective-name">Detective's / Team's Name</label>
     <input id="detective-name" required maxlength="60" autocomplete="off" placeholder="e.g. The Evidence Squad">
@@ -106,8 +107,8 @@ footer{padding-bottom:18px}
   <section class="page hero" id="briefing" role="tabpanel" aria-labelledby="tab-briefing" tabindex="0">
     <h1 id="title">The Case of Kurapika’s Missing Chains</h1>
     <p class="credit">Story created by Por Ter and Kyven</p>
-    <p>Kurapika lent a set of decorative chains to the Yorknew Auction for an antiques display. Just before the preview, the curator found an empty stand and a Joker card underneath it. The chains were later found safely stored in a labelled display box.</p>
-    <p>Find out who moved the chains, which item they used to carry them and where the chains were taken from.</p>
+    <p>Just before the Yorknew Auction preview, Kurapika and the decorative chains he had brought for the exhibition went missing. Auction staff soon found Kurapika safe in a locked side room. He told them that someone had taken him there against his wishes and taken the chains. A Joker card lay outside the room. Staff later recovered the chains intact.</p>
+    <p>Find out who kidnapped Kurapika, which item they used to carry the chains and where the kidnapping happened.</p>
   </section>
   <section class="page" id="suspects" role="tabpanel" aria-labelledby="tab-suspects" tabindex="0" hidden>
     <h2>Suspects</h2>
@@ -122,9 +123,9 @@ footer{padding-bottom:18px}
   </section>
   <section class="page" id="evidence" role="tabpanel" aria-labelledby="tab-evidence" tabindex="0" hidden>
     <h2 id="clues-title">Evidence</h2>
-    <p>At 3.15 p.m., each suspect was at a different location with a different item from the list. Exactly one of them moved the chains.</p>
+    <p>At 3.15 p.m., each suspect was at a different location with a different item from the list. Exactly one of them kidnapped Kurapika and took the chains.</p>
     <ol>
-      <li>At 3.15 p.m., auction footage shows someone at the Yorknew Auction putting the chains into the display box marked YN-12 and leaving a Joker card under the stand. A tall display board hides their face. The curator later found the chains inside box YN-12.</li>
+      <li>At 3.15 p.m., footage from the Yorknew Auction shows one person leading Kurapika into the side room. The same person then comes out alone, places the chains in display box YN-12 and leaves a Joker card by the door. A tall display board hides the person’s face. Staff recovered the chains from box YN-12.</li>
       <li>At 3.15 p.m., Gon’s aunt took a photo of him carrying a fishing rod on Whale Island.</li>
       <li>At 3.15 p.m., the arrival photo at the Zoldyck family home shows Killua holding his yo-yo.</li>
       <li>A live broadcast at 3.15 p.m. shows Hisoka performing with his poker deck at Heavens Arena.</li>
@@ -149,9 +150,9 @@ footer{padding-bottom:18px}
     <h2 id="findings-title">Submit Your Findings</h2>
     <form id="findings-form">
       <div class="grid">
-        <div><label for="suspect">Who moved the chains?</label><select id="suspect" required></select></div>
+        <div><label for="suspect">Who kidnapped Kurapika?</label><select id="suspect" required></select></div>
         <div><label for="object">What did they carry the chains in?</label><select id="object" required></select></div>
-        <div><label for="location">Where were the chains moved from?</label><select id="location" required></select></div>
+        <div><label for="location">Where did the kidnapping happen?</label><select id="location" required></select></div>
       </div>
       <p class="controls"><button class="btn">Check findings</button></p>
       <p id="findings-feedback" role="status" hidden></p>
@@ -172,8 +173,8 @@ footer{padding-bottom:18px}
     <button class="btn">Unlock solution</button>
   </form>
   <section id="solution" hidden>
-    <p><strong>Chrollo Lucilfer moved the chains from the Yorknew Auction in the display box.</strong></p>
-    <p>At 3.15 p.m., Gon was on Whale Island with the fishing rod, Killua was at the Zoldyck family home with the yo-yo, and Hisoka was at Heavens Arena with the poker deck. By elimination, Chrollo was the person shown with box YN-12 at the auction. The footage shows that same person leaving the Joker, and the curator found the chains in that box.</p>
+    <p><strong>Chrollo Lucilfer kidnapped Kurapika at the Yorknew Auction and hid the chains in display box YN-12.</strong></p>
+    <p>At 3.15 p.m., Gon was on Whale Island with the fishing rod, Killua was at the Zoldyck family home with the yo-yo, and Hisoka was at Heavens Arena with the poker deck. By elimination, Chrollo was the person shown with box YN-12 at the auction. The footage links that same person to the side room, the chains and the Joker. The Joker came from an invitation available to any visitor, so it does not identify Hisoka. Auction staff found Kurapika safe.</p>
   </section>
   <form method="dialog" class="controls"><button class="btn ghost">Close</button></form>
 </dialog>
@@ -289,7 +290,7 @@ byId('findings-form').addEventListener('submit', event => {
     && byId('object').value === solution[mover][0]
     && byId('location').value === solution[mover][1];
   feedback('findings-feedback', correct, correct
-    ? 'Case solved! Chrollo Lucilfer moved Kurapika’s chains from the Yorknew Auction in display box YN-12.'
+    ? 'Case solved! Chrollo Lucilfer kidnapped Kurapika at the Yorknew Auction and put the chains in display box YN-12. Kurapika was found safe.'
     : 'Read the auction footage clue again and check who was in each location.');
 });
 
